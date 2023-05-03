@@ -1,0 +1,19 @@
+project_name [Company-Project]: Leacards
+project_slug [leacards]:
+domain_prod [example.com]: pipit.leacards.site
+domain_stage [stage.pipit.leacards.site]: stage-pipit.leacards.site
+ssh_host_prod [pipit.leacards.site]:
+ssh_host_stage [stage-pipit.leacards.site]:
+db_name_prod [leacards]:
+db_name_stage [leacards]:
+docker_web_port [8081]:
+docker_web_ssl_port [8082]:
+docker_db_port [8083]:
+nextjs_port [3000]:
+storybook_port [3001]:
+docker_vscode_debug_port [5678]:
+version [0.1.0]:
+Select software_license:
+1 - proprietary
+2 - MIT
+Choose from 1, 2 [1]: 1

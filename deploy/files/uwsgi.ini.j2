@@ -1,0 +1,24 @@
+
+[uwsgi]
+vhost = true
+plugins = python3
+master = true
+enable-threads = true
+processes = 1
+threads = 2
+wsgi-file = /mnt/persist/www/leacards/current/src/pipit/wsgi.py
+virtualenv = /mnt/persist/www/leacards/shared/venv
+chdir = /mnt/persist/www/leacards/current/src
+touch-reload = /mnt/persist/www/leacards/reload
+memory-report = true
+stats = 127.0.0.1:{{ 9190+(uwsgi_application_count.stdout|int) }}
+
+for-readline = /mnt/persist/www/leacards/shared/.env
+  env = %(_)
+endfor =
+
+# Ignore common noisy errors
+ignore-sigpipe = true
+ignore-write-errors = true
+disable-write-exception = true
+
